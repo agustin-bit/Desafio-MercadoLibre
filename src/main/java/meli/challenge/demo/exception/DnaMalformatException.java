@@ -6,8 +6,4 @@ public class DnaMalformatException extends Exception{
         super("The dna contains a bad letter to represent a nitrogen base.");
     }
 
-    public DnaMalformatException(String message){
-        super(message);
-    }
-
 }

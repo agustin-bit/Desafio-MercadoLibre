@@ -1,0 +1,111 @@
+package meli.challenge.demo.detector;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ActiveProfiles;
+
+import javax.annotation.PostConstruct;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+@ActiveProfiles("test")
+@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
+@SpringBootTest
+class MutantDetectorTest {
+
+    private MutantDetector mutantDetector = new MutantDetector();
+
+    @Test
+    void cutTrue() {
+
+        boolean result = mutantDetector.cut(2);
+        assertTrue(result);
+
+    }
+
+    @Test
+    void cutFalse() {
+
+        boolean result = mutantDetector.cut(1);
+        assertFalse(result);
+
+    }
+
+    @Test
+    void checkSuccess() {
+
+        char [][] dnaArray = {
+                {'A','T','G','C','G','A'},
+                {'C','A','G','T','G','C'},
+                {'T','T','A','T','G','T'},
+                {'A','G','A','A','G','G'},
+                {'C','C','C','C','C','A'},
+                {'T','C','A','C','T','G'},
+        };
+
+        boolean result = mutantDetector.check(dnaArray);
+        boolean expected = true;
+
+        assertEquals(expected, result);
+
+    }
+
+    @Test
+    void checkFailed() {
+
+        char [][] dnaArray = {
+                {'A','T','G','C','G','A'},
+                {'C','T','G','T','G','C'},
+                {'T','T','A','T','G','T'},
+                {'A','G','A','A','C','G'},
+                {'C','C','C','C','C','A'},
+                {'T','C','A','C','T','G'},
+        };
+
+        boolean result = mutantDetector.check(dnaArray);
+        boolean expected = false;
+
+        assertEquals(expected, result);
+
+    }
+
+    @Test
+    void searchSuccess() {
+
+        char [] data = {'A', 'A', 'A', 'A', 'C', 'G'};
+        int result = mutantDetector.search(data);
+        int expected = 1;
+
+        assertEquals(expected, result);
+
+    }
+
+    @Test
+    void searchEmpty() {
+
+        char [] data = {'A', 'T', 'G', 'T', 'C', 'G'};
+        int result = mutantDetector.search(data);
+        int expected = 0;
+
+        assertEquals(expected, result);
+
+    }
+
+    @Test
+    void searchMulti() {
+
+        char [] data = {'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A'};
+        int result = mutantDetector.search(data);
+        int expected = 2;
+
+        assertEquals(expected, result);
+
+    }
+
+}

@@ -6,8 +6,4 @@ public class MatrixSizeException extends Exception{
         super("The size of the matrix are incorrect. Check the length of the columns and rows are equals. [NxN]");
     }
 
-    public MatrixSizeException(String message){
-        super(message);
-    }
-
 }

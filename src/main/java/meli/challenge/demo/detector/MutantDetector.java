@@ -9,7 +9,7 @@ public class MutantDetector {
     private final int DNA_LENGTH = 4;
     private final int DNA_MUTANT_COUNT = 2;
 
-    private int search(char[] row){
+    public int search(char[] row){
         char flag = ' ';
         int letterCount = 0;
         int sequenceCount = 0;
@@ -38,7 +38,7 @@ public class MutantDetector {
         return counter >= DNA_MUTANT_COUNT;
     }
 
-    public int check(char[][] matrix){
+    public boolean check(char[][] matrix){
         int counter = 0;
         int length = matrix.length;
         int row = length-1;
@@ -72,9 +72,6 @@ public class MutantDetector {
 				row < (LENGTH - DNA LENGTH) AND col > (LENGTH - DNA LENGTH)
 
 			 */
-
-
-            System.out.println(matrix[row][column]);
 
             if(column == 0){
                 counter += search(matrix[row]);
@@ -156,7 +153,7 @@ public class MutantDetector {
 
         }
 
-        return counter;
+        return counter >= DNA_MUTANT_COUNT;
 
     }
 
