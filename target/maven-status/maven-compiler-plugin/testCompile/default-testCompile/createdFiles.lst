@@ -1,0 +1,12 @@
+meli\challenge\demo\controller\MutantControllerTest.class
+meli\challenge\demo\configuration\MockConfiguration.class
+meli\challenge\demo\dto\MutantDtoTest.class
+meli\challenge\demo\service\impl\MutantServiceImplTest.class
+meli\challenge\demo\converter\DnaConverterTest.class
+meli\challenge\demo\detector\MutantDetectorTest.class
+meli\challenge\demo\MeliChallengeApplicationTest.class
+meli\challenge\demo\service\impl\StatsServiceImplTest.class
+meli\challenge\demo\controller\StatsControllerTest.class
+meli\challenge\demo\MeliChallengeApplicationTests.class
+meli\challenge\demo\validator\DnaValidatorTest.class
+meli\challenge\demo\converter\StringListConverterTest.class
