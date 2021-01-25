@@ -1,5 +1,4 @@
 server:
-  port: 5000
   servlet:
     contextPath: /api
 
@@ -9,8 +8,8 @@ spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://meli.c359607h83vt.sa-east-1.rds.amazonaws.com:3306/meli?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=America/Argentina/Buenos_Aires
-    username: root
-    password:
+    username: meli
+    password: c359607h83vt
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate.ddl-auto: update
