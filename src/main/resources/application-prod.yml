@@ -7,9 +7,9 @@ spring:
     allow-bean-definition-overriding: true
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://meli.c359607h83vt.sa-east-1.rds.amazonaws.com:3306/meli?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=America/Argentina/Buenos_Aires
-    username: meli
-    password: c359607h83vt
+    url: jdbc:mysql://meli-mluna.c359607h83vt.sa-east-1.rds.amazonaws.com:3306/meli?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=America/Argentina/Buenos_Aires
+    username: meli-mtsluna
+    password: mtsluna1
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate.ddl-auto: update
