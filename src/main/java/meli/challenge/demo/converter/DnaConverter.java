@@ -1,8 +1,17 @@
 package meli.challenge.demo.converter;
 
+import meli.challenge.demo.validator.DnaValidator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class DnaConverter {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(DnaConverter.class.getName());
+
     public static char[][] stringArrayTo2DCharArray(String [] dna){
+
+        LOGGER.info("Array of dna is starting to convert to char matrix");
+
         char[][] matrix = new char[dna.length][dna.length];
         for (int i = 0; i < dna.length; i++) {
             for (int j = 0; j < dna.length; j++) {

@@ -10,6 +10,8 @@ import meli.challenge.demo.repository.MutantRepository;
 import meli.challenge.demo.service.MutantService;
 import meli.challenge.demo.service.impl.MutantServiceImpl;
 import meli.challenge.demo.service.impl.StatsServiceImpl;
+import meli.challenge.demo.validator.DnaValidator;
+import org.junit.BeforeClass;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
@@ -17,6 +19,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -40,6 +44,8 @@ import static org.mockito.BDDMockito.given;
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(controllers = MutantController.class)
 class MutantControllerTest {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(MutantControllerTest.class.getName());
 
     private String[] dna = {
             "ATGCGA",
@@ -67,6 +73,8 @@ class MutantControllerTest {
 
     @Test
     void checkMutantFailed() throws Exception {
+
+        LOGGER.info("CheckMutant test");
 
         MutantDto mutantDto = MutantDto.builder().dna(dna).build();
 

@@ -3,10 +3,14 @@ package meli.challenge.demo.validator;
 import meli.challenge.demo.exception.DnaMalformatException;
 import meli.challenge.demo.exception.MatrixSizeException;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DnaValidatorTest {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(DnaValidatorTest.class.getName());
 
     private String[] malformated = {
             "ATGCGA",
@@ -28,6 +32,8 @@ class DnaValidatorTest {
     @Test
     void checkMatrixMalformed() {
 
+        LOGGER.info("checkMatrixMalformed test");
+
         DnaValidator dnaValidator = DnaValidator.getInstance();
 
         try {
@@ -41,6 +47,8 @@ class DnaValidatorTest {
     @Test
     void checkMatrixInvalidSize() {
 
+        LOGGER.info("checkMatrixInvalidSize test");
+
         DnaValidator dnaValidator = DnaValidator.getInstance();
 
         try {
@@ -53,6 +61,8 @@ class DnaValidatorTest {
 
     @Test
     void getInstance() {
+
+        LOGGER.info("getInstance singleton test");
 
         DnaValidator dnaValidator = DnaValidator.getInstance();
         assertNotNull(dnaValidator);

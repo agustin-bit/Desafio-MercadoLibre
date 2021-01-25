@@ -1,24 +1,3 @@
-server:
-  servlet:
-    contextPath: /api
-    port: 8080
-
 spring:
-  main:
-    allow-bean-definition-overriding: true
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/meli?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=America/Argentina/Buenos_Aires
-    username: root
-    password:
-  jpa:
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-    hibernate.ddl-auto: update
-    generate-ddl: true
-    show-sql: true
-    properties:
-      jdbc:
-        time_zone: America/Argentina/Buenos_Aires
-  jackson:
-    serialization:
-      FAIL_ON_EMPTY_BEANS: false
+  profiles:
+    active: prod

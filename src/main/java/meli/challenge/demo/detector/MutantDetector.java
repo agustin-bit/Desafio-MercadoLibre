@@ -1,10 +1,15 @@
 package meli.challenge.demo.detector;
 
 import meli.challenge.demo.converter.DnaConverter;
+import meli.challenge.demo.validator.DnaValidator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MutantDetector {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(MutantDetector.class.getName());
 
     private final int DNA_LENGTH = 4;
     private final int DNA_MUTANT_COUNT = 2;
@@ -39,6 +44,9 @@ public class MutantDetector {
     }
 
     public boolean check(char[][] matrix){
+
+        LOGGER.info("Dna check is starting");
+
         int counter = 0;
         int length = matrix.length;
         int row = length-1;
@@ -152,6 +160,8 @@ public class MutantDetector {
             //End
 
         }
+
+        LOGGER.info("The sequence count are"+ ((counter >= DNA_MUTANT_COUNT) ? "equals or higher to 2" : counter));
 
         return counter >= DNA_MUTANT_COUNT;
 

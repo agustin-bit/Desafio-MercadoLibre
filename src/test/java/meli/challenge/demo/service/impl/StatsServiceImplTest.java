@@ -3,6 +3,7 @@ package meli.challenge.demo.service.impl;
 import meli.challenge.demo.dto.StatsDto;
 import meli.challenge.demo.repository.MutantRepository;
 import meli.challenge.demo.service.StatsService;
+import meli.challenge.demo.validator.DnaValidator;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,6 +14,8 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
@@ -27,6 +30,8 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 class StatsServiceImplTest {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(StatsServiceImplTest.class.getName());
+
     @Mock
     private MutantRepository mutantRepository;
 
@@ -35,6 +40,8 @@ class StatsServiceImplTest {
 
     @Test
     void findStats() {
+
+        LOGGER.info("findStats test");
 
         when(mutantRepository.findStats()).thenReturn(new StatsDto());
         StatsDto statsDto = statsService.findStats();
