@@ -24,7 +24,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
-@ActiveProfiles("test")
+@ActiveProfiles("dev")
 @RunWith(MockitoJUnitRunner.class)
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest
@@ -46,6 +46,21 @@ class StatsServiceImplTest {
         when(mutantRepository.findStats()).thenReturn(new StatsDto());
         StatsDto statsDto = statsService.findStats();
         assertNotNull(statsDto);
+
+    }
+
+    @Test
+    void findStatsNull() {
+
+        LOGGER.info("findStatsNull test");
+
+        when(mutantRepository.findStats()).thenReturn(null);
+
+        try {
+            StatsDto statsDto = statsService.findStats();
+        } catch (NullPointerException e){
+            assertNotNull(e);
+        }
 
     }
 

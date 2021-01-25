@@ -16,7 +16,7 @@ import javax.annotation.PostConstruct;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ActiveProfiles("test")
+@ActiveProfiles("dev")
 @RunWith(MockitoJUnitRunner.class)
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest

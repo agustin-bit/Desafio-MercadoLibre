@@ -3,6 +3,7 @@ meli\challenge\demo\repository\MutantRepository.class
 meli\challenge\demo\service\MutantService.class
 meli\challenge\demo\model\Mutant$MutantBuilder.class
 meli\challenge\demo\exception\MatrixSizeException.class
+meli\challenge\demo\configuration\SwaggerConfig.class
 meli\challenge\demo\exception\DnaMalformatException.class
 meli\challenge\demo\validator\DnaValidator.class
 meli\challenge\demo\controller\StatsController.class
