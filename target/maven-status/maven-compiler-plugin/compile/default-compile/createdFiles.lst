@@ -1,5 +1,6 @@
 meli\challenge\demo\controller\MutantController.class
 meli\challenge\demo\repository\MutantRepository.class
+meli\challenge\demo\exception\ExceptionMessage$ExceptionMessageBuilder.class
 meli\challenge\demo\service\MutantService.class
 meli\challenge\demo\model\Mutant$MutantBuilder.class
 meli\challenge\demo\exception\MatrixSizeException.class
@@ -11,6 +12,8 @@ meli\challenge\demo\converter\DnaConverter.class
 meli\challenge\demo\service\impl\StatsServiceImpl.class
 meli\challenge\demo\dto\MutantDto$MutantDtoBuilder.class
 meli\challenge\demo\dto\StatsDto$StatsDtoBuilder.class
+meli\challenge\demo\exception\ExceptionControllerAdvice.class
+meli\challenge\demo\exception\ExceptionMessage.class
 meli\challenge\demo\service\impl\MutantServiceImpl.class
 meli\challenge\demo\dto\MutantDto.class
 meli\challenge\demo\model\Mutant.class

@@ -14,6 +14,8 @@ C:\Users\MtsSk\Documents\workspaceSpring\MELI\src\main\java\meli\challenge\demo\
 C:\Users\MtsSk\Documents\workspaceSpring\MELI\src\main\java\meli\challenge\demo\converter\DnaConverter.java
 C:\Users\MtsSk\Documents\workspaceSpring\MELI\src\main\java\meli\challenge\demo\converter\StringListConverter.java
 C:\Users\MtsSk\Documents\workspaceSpring\MELI\src\main\java\meli\challenge\demo\validator\DnaValidator.java
+C:\Users\MtsSk\Documents\workspaceSpring\MELI\src\main\java\meli\challenge\demo\exception\ExceptionControllerAdvice.java
 C:\Users\MtsSk\Documents\workspaceSpring\MELI\src\main\java\meli\challenge\demo\MeliChallengeApplication.java
+C:\Users\MtsSk\Documents\workspaceSpring\MELI\src\main\java\meli\challenge\demo\exception\ExceptionMessage.java
 C:\Users\MtsSk\Documents\workspaceSpring\MELI\src\main\java\meli\challenge\demo\exception\DnaMalformatException.java
 C:\Users\MtsSk\Documents\workspaceSpring\MELI\src\main\java\meli\challenge\demo\detector\MutantDetector.java
