@@ -34,14 +34,14 @@ Tenga en cuenta que no podra ejecutar el profile de produción en local debido a
 http://localhost:5000
 
 #### Producción
-http://meli-env-last.eba-u5gqtpvm.sa-east-1.elasticbeanstalk.com
+http://meli-env.eba-u5gqtpvm.sa-east-1.elasticbeanstalk.com
 
 ## Request utiles
 
 #### Mutant checker
 - POST http://localhost:5000/api/mutant/
 
-- POST http://meli-env-last.eba-u5gqtpvm.sa-east-1.elasticbeanstalk.com/api/mutant/
+- POST http://meli-env.eba-u5gqtpvm.sa-east-1.elasticbeanstalk.com/api/mutant/
 
 Body de ejemplo:
 ```json
@@ -66,7 +66,7 @@ Estados HTTP validos:
 #### Stats info
 - GET http://localhost:5000/api/stats
 
-- GET http://meli-env-last.eba-u5gqtpvm.sa-east-1.elasticbeanstalk.com/api/stats
+- GET http://meli-env.eba-u5gqtpvm.sa-east-1.elasticbeanstalk.com/api/stats
 
 Respuesta de ejemplo:
 ```json
@@ -82,7 +82,7 @@ Respuesta de ejemplo:
 #### Swagger Documentation
 http://localhost:5000/api/swagger-ui/#/
 
-http://meli-env-last.eba-u5gqtpvm.sa-east-1.elasticbeanstalk.com/api/swagger-ui/#/
+http://meli-env.eba-u5gqtpvm.sa-east-1.elasticbeanstalk.com/api/swagger-ui/#/
 
 ## Code Coverage
 Se testearon las clases con logica elemental para el funcionamiento de la aplicación. Los bajos niveles de coverage en DTO y Model es debido al uso de lombok.
