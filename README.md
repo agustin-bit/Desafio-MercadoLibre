@@ -13,6 +13,7 @@ Te ha contratado a ti para que desarrolles un proyecto que detecte si un humano 
 - AWS Elastic Beanstalk
 - AWS RDS
 - AWS CodePipeline
+- Apache JMeter
 
 ## Ejecución de la aplicación
 Para ejecutar la aplicación posicionese sobre la raiz del proyecto y escriba en la consola el comando correspondiente a sus necesidades de ambiente:
@@ -93,6 +94,17 @@ Se testearon las clases con logica elemental para el funcionamiento de la aplica
 Se implemento el uso del pipeline AWS CodePipeline, permitiendo así la entrega continua del producto final en cuestión. Se adjunta una demostración:
 
 ![AWS CodePipeline](/files/pipeline.png)
+
+## Pruebas de carga
+Para ejecutar las pruebas de carga de la aplicación debe de descargar Apache JMeter en el siguiente enlace:
+
+https://jmeter.apache.org/
+
+Luego descargar la siguiente configuración: 
+
+https://github.com/mtsluna/Desafio-MercadoLibre/blob/master/files/jmeterload.jmx
+
+Una vez descargada debe abrirla dentro de Apache JMeter, por defecto se encuentra configurado en 100 threads y 100 peticiones por hilo, que dan un total de 10000 request, ya sea de stats o de checkeo de mutantes.
 
 ## Diagramas
 Se adjunta a continuación un enlace al pdf con los diagramas de secuencia del funcionamiento de la aplicación:
