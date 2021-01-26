@@ -104,7 +104,7 @@ Luego descargar la siguiente configuración:
 
 https://github.com/mtsluna/Desafio-MercadoLibre/blob/master/files/jmeterload.jmx
 
-Una vez descargada debe abrirla dentro de Apache JMeter, por defecto se encuentra configurado en 100 threads y 100 peticiones por hilo, que dan un total de 10000 request, ya sea de stats o de checkeo de mutantes.
+Una vez descargada debe abrirla dentro de Apache JMeter y ejecutarla con el botón verde de play, por defecto se encuentra configurado en 100 hilos y 100 peticiones por hilo, que dan un total de 10000 request, ya sea de stats o de checkeo de mutantes.
 
 ## Diagramas
 Se adjunta a continuación un enlace al pdf con los diagramas de secuencia del funcionamiento de la aplicación:
